@@ -18,6 +18,7 @@ Esta versión restaura la distribución vertical original: video, prompt y poema
 - `assets/og-alfonsina-trap-y-poesia.jpg`: imagen que aparece al compartir el enlace en redes.
 - `en/index.html`: versión en inglés de la portada (presentación y manifiesto traducido).
 - `sitemap.xml` y `robots.txt`: para buscadores.
+- `llms.txt`: resumen del proyecto y del manifiesto para inteligencias artificiales (ChatGPT, Claude, Perplexity, etc.), en español e inglés.
 - `assets/alfonsina.png`: imagen fija utilizada en el logotipo de navegación.
 - `CNAME`: dominio `alfonsinatrapypoesia.lidyacota.com`.
 - `.nojekyll`: permite servir los archivos directamente en GitHub Pages.
