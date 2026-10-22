@@ -1,2 +1,91 @@
-*{box-sizing:border-box}html{background:#000;scroll-padding-top:72px}body{margin:0;background:#000;color:white;font-family:'VT323',monospace}a{color:inherit}a:focus-visible,summary:focus-visible,[role=button]:focus-visible{outline:3px solid #39ff14;outline-offset:4px}.site-header{height:56px;position:sticky;top:0;z-index:200;background:#000;display:flex;align-items:center;justify-content:space-between;padding:8px 28px;gap:20px}.brand{display:flex;align-items:center;gap:16px;color:white;text-decoration:none;font-size:26.6667px;letter-spacing:2px;white-space:nowrap}.brand img{object-fit:cover}.site-nav{font-size:16px}.tracks-menu{position:relative}.tracks-menu summary{cursor:pointer;list-style:none;padding:12px 8px;white-space:nowrap}.tracks-menu summary:after{content:'';display:inline-block;width:7px;height:7px;border-right:1px solid;border-bottom:1px solid;transform:rotate(45deg);margin:0 5px 3px 12px}.tracks-menu summary::-webkit-details-marker{display:none}.menu-list{position:absolute;right:0;top:100%;min-width:185px;background:#181818;box-shadow:0 8px 20px #0008;padding:8px 0;max-height:calc(100svh - 76px);overflow:auto}.menu-list a{display:block;padding:12px 22px;text-decoration:none;white-space:nowrap}.menu-list a:hover,.menu-list a:focus-visible{background:#333}.album-cover{height:calc(100svh - 56px);min-height:400px;background:#000}.cover-image{width:100%;height:100%;object-fit:cover;display:block}.original-block{width:89.501953125%;margin:0 auto;container-type:inline-size}.title-block{padding:24px 0}.track-index{width:89.501953125%;margin:auto;padding:24px 0 36px}.track-index>h2{font-size:96px;font-weight:400;margin:24px 0;line-height:1.2}.track-row{display:block;font-size:45.3333px;line-height:1.2;font-weight:400;margin:0 0 20px;text-decoration:none}.track-row>span:last-child{text-decoration:underline}.video-section{background:#000;padding:24px 0}.video-frame{width:89.501953125%;aspect-ratio:16/8.5;margin:auto}.video-frame iframe{width:100%;height:100%;display:block;border:0}.prompt-section,.poem-section{background:#e526ef;padding:24px 0}.track-navigation{display:flex;justify-content:center;gap:30px;background:#e526ef;padding:28px 5%;font-size:45.3333px;line-height:1.2}.track-navigation a{color:#00ff00;text-decoration:underline}.manifesto{background:#fff;color:#000;padding:28px 5%;font-family:'VT323',monospace}.manifesto-inner{width:100%;margin:auto}.manifesto p{margin-top:0}.manifesto p:has(>br:only-child){display:none}.credits{padding:24px 5%;text-align:center;font-size:16px;background:#fff;color:#000}.credits small{display:block}.credits a{color:inherit}
-@media(max-width:600px){.site-header{padding:8px 14px;gap:10px}.brand{font-size:26.6667px;min-width:0;gap:10px}.brand span{overflow:hidden;text-overflow:ellipsis}.brand img{width:48px;height:32px}.site-nav{flex:none}.original-block,.video-frame,.track-index{width:92%}.album-cover{min-height:360px}.track-row{overflow-wrap:break-word}.manifesto-inner{overflow-wrap:break-word}.track-navigation{gap:20px}}
+*{box-sizing:border-box}html{background:#000;scroll-padding-top:72px}body{margin:0;background:#000;color:white;font-family:'VT323',monospace}a{color:inherit}a:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:3px solid #39ff14;outline-offset:4px}
+
+/* ===== Barra superior: medidas del sitio original (Google Sites) ===== */
+.site-header{height:56px;position:sticky;top:0;z-index:200;background:#1c1c1c;color:#f9f9f9;display:flex;align-items:center;padding:0 48px 0 16px}
+.brand{display:flex;align-items:center;height:56px;min-width:0;color:#f9f9f9;text-decoration:none}
+.brand img{display:block;flex:none;width:87.1px;height:56px;object-fit:fill}
+.brand span{font-family:'Share Tech Mono',monospace;font-size:20px;line-height:20px;padding:16px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-toggle,.nav-close,.nav-scrim{display:none}
+.nav-toggle,.nav-close,.tracks-toggle{border:0;padding:0;background:none;color:inherit;cursor:pointer}
+.site-nav{margin-left:auto}
+.tracks-menu{position:relative;display:flex;align-items:center;height:38px;padding:0 8px 0 12px}
+.tracks-head{display:flex;align-items:center}
+.tracks-link{font-family:'Share Tech Mono',monospace;font-size:16px;line-height:18px;color:#f9f9f9;text-decoration:none;white-space:nowrap}
+.tracks-toggle{order:2;display:grid;place-items:center;width:24px;height:24px;margin-left:1px}
+.tracks-toggle svg{display:block;width:24px;height:24px;transition:transform .2s}
+.tracks-menu.open .tracks-toggle svg{transform:rotate(180deg)}
+.menu-list{display:none;position:absolute;top:100%;right:-32px;width:240px;max-height:calc(100svh - 56px);overflow-y:auto;background:#1c1c1c;box-shadow:0 0 10px rgba(0,0,0,.55);border-radius:2px;padding:0 0 16px}
+.tracks-menu:hover .menu-list,.tracks-menu.open .menu-list{display:block}
+.menu-list a{display:block;padding:16px 20px 0 32px;font-family:'Share Tech Mono',monospace;font-size:16px;line-height:18px;color:#f9f9f9;text-decoration:none;white-space:nowrap}
+
+/* Tablet y celular: menú ☰ lateral, como el original */
+@media(max-width:767px){
+.site-header{padding:0}
+.nav-toggle{display:grid;place-items:center;flex:none;width:48px;height:56px}
+.brand{margin-left:-12px}
+.brand span{font-size:18.6667px}
+.site-nav{position:fixed;top:0;left:0;bottom:0;z-index:2;width:250px;margin:0;padding:56px 0 16px;overflow-y:auto;background:#1c1c1c;transform:translateX(-100%);visibility:hidden;transition:transform .5s cubic-bezier(.4,0,.2,1),visibility 0s linear .5s}
+.nav-open .site-nav{transform:none;visibility:visible;transition:transform .5s cubic-bezier(.4,0,.2,1),visibility 0s}
+.nav-close{display:grid;place-items:center;position:absolute;top:0;left:0;width:48px;height:56px}
+.nav-scrim{display:block;position:fixed;inset:0;z-index:1;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-open .nav-scrim{opacity:1;pointer-events:auto}
+.nav-open{overflow:hidden}
+.tracks-menu{display:block;height:auto;padding:0}
+.tracks-head{height:34px;padding:16px 12px 0}
+.tracks-toggle{order:0;margin:0}
+.tracks-toggle svg{transform:rotate(180deg)}
+.tracks-menu.collapsed .tracks-toggle svg{transform:none}
+.tracks-link{order:1;padding-left:4px}
+.menu-list,.tracks-menu:hover .menu-list{display:block;position:static;width:auto;max-height:none;overflow:visible;background:none;box-shadow:none;border-radius:0;padding:0}
+.tracks-menu.collapsed .menu-list{display:none}
+.menu-list a{padding:16px 12px 0 60px}
+}
+@media(max-width:479px){.brand span{display:none}}
+
+/* ===== Contenido (sin cambios) ===== */
+.album-cover{height:calc(100svh - 56px);min-height:400px;background:#000}.cover-image{width:100%;height:100%;object-fit:cover;display:block}.original-block{width:89.501953125%;margin:0 auto;container-type:inline-size}.title-block{padding:24px 0}.track-index{width:89.501953125%;margin:auto;padding:24px 0 36px}.track-index>h2{font-size:96px;font-weight:400;margin:24px 0;line-height:1.2}.track-row{display:block;font-size:45.3333px;line-height:1.2;font-weight:400;margin:0 0 20px;text-decoration:none}.track-row>span:last-child{text-decoration:underline}.video-section{background:#000;padding:24px 0}.video-frame{width:89.501953125%;aspect-ratio:16/8.5;margin:auto}.video-frame iframe{width:100%;height:100%;display:block;border:0}.prompt-section,.poem-section{background:#e526ef;padding:24px 0}
+
+/* ===== <<PREV NEXT>>: franja negra y tamaños del original ===== */
+.track-navigation{display:block;text-align:center;background:#000;padding:32px 5%;font-family:'VT323',monospace;font-size:128px;line-height:1.38}
+.track-navigation a{display:inline-block;color:#00ff00;text-decoration:underline}
+@media(max-width:767px){.track-navigation{font-size:106.6667px}}
+@media(max-width:479px){.track-navigation{font-size:80px}}
+
+/* ===== Manifiesto: títulos en VT323, párrafos en Share Tech Mono (como el original) ===== */
+.manifesto{background:#fff;color:#000;padding:28px 5%;font-family:'VT323',monospace}.manifesto-inner{width:100%;margin:auto}.manifesto p{margin-top:0;font-family:'Share Tech Mono',monospace}.manifesto p:has(>br:only-child){display:none}.manifesto a{color:#1c1c1c}
+@media(max-width:767px){
+.manifesto span[style*="font-size: 96.0px"]{font-size:81.3333px!important}
+.manifesto span[style*="font-size: 64.0px"]{font-size:54.6667px!important}
+.manifesto span[style*="font-size: 48.0px"]{font-size:42.6667px!important}
+.manifesto span[style*="font-size: 32.0px"]{font-size:29.3333px!important}
+}
+@media(max-width:479px){
+.manifesto span[style*="font-size: 96.0px"]{font-size:61.3333px!important}
+.manifesto span[style*="font-size: 64.0px"]{font-size:44px!important}
+.manifesto span[style*="font-size: 48.0px"]{font-size:36px!important}
+.manifesto span[style*="font-size: 32.0px"]{font-size:26.6667px!important}
+}
+
+/* ===== Foto antes de los créditos (como el original) ===== */
+.author-photo{display:block;width:100%;height:434px;object-fit:cover;object-position:50% 50%;background:#fff}
+
+/* ===== Pie de página: igual al original ===== */
+.credits{padding:35px 5% 40px;text-align:center;background:#fff;color:#1c1c1c;font-family:'Share Tech Mono',monospace;font-size:16px;line-height:24px}.credits small{display:block;font-size:inherit}.credits a{color:#1c1c1c}
+
+/* ===== Animación al pasar el mouse: brillo neón + temblor, conservando los colores ===== */
+@keyframes hover-shake{0%{transform:translate(0,0)}25%{transform:translate(1px,-1px) rotate(.2deg)}50%{transform:translate(-1px,1px) rotate(-.2deg)}100%{transform:translate(0,0)}}
+@keyframes hover-flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.7}}
+.track-row span,.menu-list a,.track-navigation a{transition:text-shadow .2s}
+.track-row:hover,.track-row:focus-visible,.menu-list a:hover,.menu-list a:focus-visible,.track-navigation a:hover,.track-navigation a:focus-visible{animation:hover-shake .15s infinite,hover-flicker 2s infinite alternate}
+.track-row:hover span,.track-row:focus-visible span,.menu-list a:hover,.menu-list a:focus-visible,.track-navigation a:hover,.track-navigation a:focus-visible{text-shadow:0 0 6px currentColor,0 0 14px currentColor,0 0 28px currentColor}
+@media(prefers-reduced-motion:reduce){.track-row:hover,.track-row:focus-visible,.menu-list a:hover,.menu-list a:focus-visible,.track-navigation a:hover,.track-navigation a:focus-visible{animation:none}}
+
+@media(max-width:600px){.original-block,.video-frame,.track-index{width:92%}.album-cover{min-height:360px}.track-row{overflow-wrap:break-word}.manifesto-inner{overflow-wrap:break-word}}
+
+/* ===== Página en inglés: presentación del proyecto ===== */
+.about{background:#000;color:#fff;padding:24px 0 36px}.about-inner{width:89.501953125%;margin:auto}.about h2{font-family:'VT323',monospace;font-size:96px;font-weight:400;margin:24px 0;line-height:1.2}.about p{font-family:'Share Tech Mono',monospace;font-size:32px;line-height:1.8;margin:0 0 1em}
+@media(max-width:767px){.about p{font-size:29.3333px}}
+@media(max-width:479px){.about p{font-size:26.6667px}}
+@media(max-width:600px){.about-inner{width:92%;overflow-wrap:break-word}}
+/* Enlace al otro idioma en el pie */
+.credits .lang-switch{display:block;margin-top:20px}.credits .lang-switch::before{content:'';display:block;width:240px;max-width:60%;height:1px;margin:0 auto 16px;background:#1c1c1c;opacity:.35}.credits .lang-switch a{color:#c000c8;text-transform:uppercase;letter-spacing:2px;text-decoration:none}.credits .lang-switch a:hover,.credits .lang-switch a:focus-visible{text-decoration:underline}
