@@ -1,0 +1,126 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+    
+    --neon-lime: #39ff14;
+    --neon-pink: #ff00ff;
+    --neon-cyan: #00ffff;
+    --neon-yellow: #ffff00;
+    
+    --beat-duration: 0.5217s; 
+  }
+.poem-art{ 
+    margin: 0; 
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden; 
+  }
+.poem-art .poem-terminal{
+    width: 95cqw;
+    height: calc(95 * var(--source-vh, 1vh));
+    margin: calc(2.5 * var(--source-vh, 1vh)) auto;
+    background: #000;
+    border: 4px solid var(--neon-lime);
+    border-left: 12px solid var(--neon-yellow);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 50px rgba(255, 0, 255, 0.4);
+    overflow: hidden;
+  }
+.poem-art .terminal-header{
+    padding: 2cqw 4cqw;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+    z-index: 10;
+  }
+.poem-art h1{
+    font-family: 'VT323', monospace;
+    font-size: 8cqw; 
+    color: var(--neon-lime);
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 0px var(--neon-pink), -3px -3px 0px var(--neon-cyan);
+  }
+.poem-art .author{
+    font-family: 'VT323', monospace;
+    font-size: 2.8cqw;
+    background: var(--neon-cyan);
+    display: inline-block;
+    padding: 0 10px;
+    margin-top: 5px;
+    color: #000;
+    font-weight: bold;
+  }
+.poem-art .scroll-body{
+    padding: 3cqw 4cqw;
+    overflow-y: auto;
+    flex-grow: 1;
+    z-index: 5;
+  }
+.poem-art .scroll-body::-webkit-scrollbar{ width: 10px; }
+.poem-art .scroll-body::-webkit-scrollbar-thumb{ background: var(--neon-lime); border-radius: 5px; }
+.poem-art p{
+    font-size: 3.5cqw; 
+    line-height: 1.2;
+    margin-bottom: 5cqw;
+    font-weight: 900;
+    
+    white-space: pre-wrap; 
+    
+    
+    background: linear-gradient(
+      135deg,
+      var(--neon-lime),
+      var(--neon-pink),
+      var(--neon-cyan),
+      var(--neon-yellow),
+      var(--neon-lime) 
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    
+    
+    animation: 
+      flashRainbow var(--beat-duration) steps(4) infinite, 
+      strobeEffect 0.1s infinite alternate;
+  }
+@keyframes flashRainbow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+@keyframes strobeEffect{
+    0% { filter: drop-shadow(0 0 2px var(--neon-pink)) brightness(1); }
+    100% { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7)) brightness(1.3); }
+  }
+.poem-art .scanline{
+    width: 100%; height: 100%;
+    position: absolute; top: 0; left: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%);
+    background-size: 100% 6px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+@container (max-width: 600px){.poem-art p{ font-size: 5.5cqw; line-height: 1.3; }
+.poem-art h1{ font-size: 14cqw; }}

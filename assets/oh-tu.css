@@ -1,0 +1,161 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+            margin: 0; padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'VT323', monospace;
+            display: flex; flex-direction: column;
+            align-items: center; min-height: calc(100 * var(--source-vh, 1vh));
+            overflow-x: hidden;
+        }
+.poem-art header{
+            text-align: center;
+            padding: 20px 10px;
+            z-index: 20;
+            width: 100%;
+        }
+.poem-art h1{ 
+            margin: 0; 
+            font-size: 7.5rem; 
+            color: #ffff00; 
+            text-shadow: 6px 6px #ff0000;
+            line-height: 1;
+        }
+.poem-art .author{
+            font-size: 3rem;
+            color: #00ffff;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+.poem-art .instrucciones-box{
+            background: #111;
+            border: 2px solid #333;
+            padding: 15px 30px;
+            border-radius: 12px;
+            max-width: 750px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+            margin: 0 auto 10px auto; 
+        }
+.poem-art .instrucciones{
+            font-size: 2rem;
+            color: #fff;
+            margin: 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+.poem-art #score-board{
+            font-size: 2.5rem;
+            color: #ffff00;
+            margin-top: 5px;
+        }
+.poem-art #game-container{
+            position: relative;
+            border: 5px solid #2121ff;
+            background-color: #000;
+            margin-top: 10px;
+            width: 95cqw;
+            height: calc(65 * var(--source-vh, 1vh));
+            overflow: hidden; 
+            touch-action: none;
+            outline: none;
+        }
+.poem-art #scroll-wrapper{
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden; 
+            overflow-x: hidden;
+            position: relative;
+            scrollbar-width: thin;
+            scrollbar-color: #2121ff #000;
+        }
+.poem-art #start-screen{
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            z-index: 100;
+            cursor: pointer;
+        }
+.poem-art #start-screen h2{
+            font-size: 4rem;
+            color: #ffff00;
+            text-align: center;
+        }
+.poem-art .pulse{ animation: pulseAnim 1s infinite alternate; }
+@keyframes pulseAnim{ 
+            from { transform: scale(1); opacity: 0.8; } 
+            to { transform: scale(1.1); opacity: 1; } 
+        }
+.poem-art #poem-layer{
+            position: absolute;
+            top: 0; left: 0;
+            padding: 40px;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            white-space: pre;
+            color: #ffffff;
+            z-index: 5;
+            pointer-events: none;
+            text-shadow: 2px 2px 4px #000;
+        }
+.poem-art #game-canvas{
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 10;
+        }
+.poem-art #controls{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: grid;
+            grid-template-columns: repeat(3, 70px);
+            gap: 10px;
+            z-index: 60; 
+        }
+.poem-art .btn{
+            background: rgba(34, 34, 34, 0.8); 
+            color: #fff;
+            border: 3px solid #ffff00;
+            font-size: 2.5rem;
+            height: 70px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            border-radius: 15px;
+            user-select: none;
+            box-shadow: 0 0 10px #000;
+        }
+.poem-art .btn:active{
+            background: #ffff00;
+            color: #000;
+        }
+@container (max-width: 600px){.poem-art h1{ font-size: 3.5rem; }
+.poem-art .author{ font-size: 1.8rem; }
+.poem-art .instrucciones{ font-size: 1.3rem; }
+.poem-art #poem-layer{ 
+                font-size: 2.1cqw; 
+                padding: 15px; 
+            }
+.poem-art #start-screen h2{ font-size: 2rem; }
+.poem-art #controls{ grid-template-columns: repeat(3, 60px); gap: 5px; bottom: 10px; }
+.poem-art .btn{ height: 60px; font-size: 2rem; }}

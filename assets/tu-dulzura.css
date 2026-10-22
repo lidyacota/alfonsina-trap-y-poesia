@@ -1,0 +1,99 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+    margin: 0; padding: 0; background-color: #000;
+    font-family: 'Audiowide', sans-serif;
+    display: flex; justify-content: center; color: #fff;
+    overflow-x: hidden;
+  }
+.poem-art #container{
+    padding: 3rem 2rem;
+    display: flex; flex-direction: column; gap: 4rem;
+    max-width: 900px;
+  }
+.poem-art h1{
+    font-size: 3.5rem; margin: 0; text-transform: uppercase;
+    color: #ff00de; text-align: center;
+    text-shadow: 0 0 15px #ff00de;
+  }
+.poem-art .author{ font-size: 1.2rem; opacity: 0.4; margin-bottom: 2rem; text-align: center; }
+.poem-art p{ font-size: 1.8rem; margin: 0; line-height: 1.5; font-weight: bold; }
+.poem-art .stanza{ display: flex; flex-direction: column; gap: 0.8rem; }
+.poem-art .s1{ color: #b6ff00; }
+.poem-art .s2{ color: #00ccff; }
+.poem-art .s3{ color: #ffdd1b; }
+.poem-art .s4{ color: #ff00de; }
+.poem-art .rhyme{
+    display: inline-block;
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    will-change: transform, text-shadow;
+  }
+@keyframes rhymeFlash{
+    0%, 10%, 35%, 100% { 
+      text-shadow: none; 
+      transform: scale(1); 
+      filter: brightness(1); 
+    }
+    15%, 30% { 
+      text-shadow: 0 0 20px currentColor, 0 0 35px currentColor; 
+      transform: scale(1.05); 
+      filter: brightness(1.8);
+    }
+  }
+.poem-art .rhyme{ animation-name: rhymeFlash; }
+.poem-art .group-a{ animation-delay: 0s; }
+.poem-art .group-b{ animation-delay: 0.5s; }
+.poem-art .group-c{ animation-delay: 1s; }
+.poem-art .group-d{ animation-delay: 1.5s; }
+.poem-art .sensual{
+    display: inline-block;
+    color: inherit; 
+    text-shadow: none;
+    animation-duration: 8s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    will-change: text-shadow, color, transform;
+  }
+@keyframes sensualGlowAndContrast{
+    0%, 10%, 35%, 100% { 
+      text-shadow: none; 
+      color: inherit; 
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    15%, 30% { 
+      text-shadow: 0 0 25px currentColor, 0 0 45px currentColor; 
+      color: var(--contrast-color); 
+      transform: scale(1.1); 
+      filter: brightness(2);
+    }
+  }
+.poem-art .sensual{ animation-name: sensualGlowAndContrast; }
+.poem-art .s1 .sensual{ --contrast-color: #ff00de; animation-delay: 0s; }
+.poem-art .s2 .sensual{ --contrast-color: #ff9900; animation-delay: 2s; }
+.poem-art .s3 .sensual{ --contrast-color: #228dff; animation-delay: 4s; }
+.poem-art .s4 .sensual{ --contrast-color: #b6ff00; animation-delay: 6s; }
+@container (max-width: 600px){.poem-art p{ font-size: 1.3rem; }
+.poem-art h1{ font-size: 2rem; }
+.poem-art #container{ gap: 3rem; }}

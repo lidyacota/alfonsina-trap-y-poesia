@@ -1,0 +1,82 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+    --neon-pink: #ff00ff;
+    --neon-cyan: #00ffff;
+  }
+.poem-art, .poem-art{ 
+    margin: 0; padding: 0; width: 100%; height: 100%; 
+    background-color: #000; 
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden; 
+  }
+.poem-art #heart-canvas{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+  }
+.poem-art .poem-terminal{
+    position: relative;
+    width: 90cqw;
+    height: calc(90 * var(--source-vh, 1vh));
+    margin: calc(5 * var(--source-vh, 1vh)) auto;
+    border: 3px solid var(--neon-pink);
+    border-left: 15px solid var(--neon-pink);
+    display: flex;
+    flex-direction: column;
+    z-index: 10; 
+    background: rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 0 50px rgba(255, 0, 255, 0.2);
+  }
+.poem-art .terminal-header{
+    padding: 1.5cqw 3cqw;
+    border-bottom: 3px solid var(--neon-pink);
+    background: rgba(20, 0, 20, 0.9);
+  }
+.poem-art h1{
+    font-family: 'VT323', monospace;
+    font-size: 5cqw; 
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px var(--neon-pink);
+  }
+.poem-art .author{
+    font-family: 'VT323', monospace;
+    font-size: 1.8cqw;
+    color: var(--neon-cyan);
+    font-weight: bold;
+  }
+.poem-art .scroll-body{
+    padding: 2cqw 4cqw;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+.poem-art p{
+    font-size: 2.8cqw; 
+    line-height: 1.4;
+    margin-bottom: 5cqw;
+    color: #fff;
+    white-space: pre-wrap;
+    font-weight: 900;
+    text-shadow: 3px 3px 0px #000;
+  }
+@container (max-width: 600px){.poem-art p{ font-size: 6cqw; }
+.poem-art h1{ font-size: 12cqw; }}

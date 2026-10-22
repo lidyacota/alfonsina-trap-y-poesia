@@ -1,0 +1,88 @@
+.title-art{
+        --neon-pink: #ff00ff;
+        --neon-green: #39ff14;
+        --bg-black: #000;
+        --margin-safe: 4cqw;
+    }
+.title-art{
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-black);
+        font-family: 'VT323', monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100 * var(--source-vh, 1vh));
+        overflow: hidden;
+        background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+    }
+.title-art .homepage-container{
+        width: calc(100cqw - var(--margin-safe));
+        text-align: center;
+    }
+.title-art .title-main{
+        font-size: 18cqw; 
+        line-height: 0.85;
+        text-transform: uppercase;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+@container (min-width: 1200px){.title-art .title-main{ font-size: 15rem; }}
+.title-art .alfonsina{
+        color: #fff;
+        width: 100%;
+        display: block;
+        text-shadow: 
+            0 0 10px #fff,
+            0 0 20px var(--neon-pink),
+            0 0 40px var(--neon-pink),
+            0 0 80px var(--neon-pink);
+        animation: flicker 2s infinite alternate;
+    }
+.title-art .bottom-line{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        white-space: nowrap;
+        
+        gap: 0.5ch; 
+    }
+.title-art .bottom-line span{
+        font-size: 0.8em;
+    }
+.title-art .trap{
+        color: var(--neon-green);
+        text-shadow: 
+            0 0 10px var(--neon-green),
+            0 0 30px var(--neon-green);
+        animation: shake 0.15s infinite;
+    }
+.title-art .y-poesia{
+        background: linear-gradient(90deg, 
+            #ff0000, #ff00ff, #0044ff, #00ffff, #39ff14, #ffff00, #ff0000);
+        background-size: 300% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbowFlow 3s linear infinite;
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+@keyframes flicker{
+        0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+        20%, 24%, 55% { opacity: 0.7; text-shadow: none; }
+    }
+@keyframes shake{
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(1px, -1px) rotate(0.2deg); }
+        50% { transform: translate(-1px, 1px) rotate(-0.2deg); }
+        100% { transform: translate(0, 0); }
+    }
+@keyframes rainbowFlow{
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+@container (max-width: 400px){.title-art .title-main{ font-size: 17cqw; }
+.title-art .bottom-line span{ font-size: 0.75em; }}

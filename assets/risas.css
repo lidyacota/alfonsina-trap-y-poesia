@@ -1,0 +1,108 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+        --bg-deep: #000;
+        --neon-cyan: #00ffff;
+        --neon-magenta: #ff00ff;
+        --neon-lime: #39ff14;
+        --neon-purple: #9d00ff;
+    }
+.poem-art, .poem-art{
+        margin: 0; padding: 0;
+        background-color: var(--bg-deep);
+        color: #fff;
+        font-family: 'VT323', monospace;
+        overflow: hidden; 
+        height: calc(100 * var(--source-vh, 1vh));
+        width: 100cqw;
+    }
+.poem-art #canvas-risas{
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+.poem-art #main-content{
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        height: calc(100 * var(--source-vh, 1vh));
+        width: 100cqw;
+        box-sizing: border-box;
+        padding: calc(2 * var(--source-vh, 1vh)) 0;
+    }
+.poem-art header{
+        flex: 0 0 auto;
+        text-align: center;
+        margin-bottom: calc(2 * var(--source-vh, 1vh));
+    }
+.poem-art h1{
+        font-size: clamp(2.5rem, 15cqw, calc(6 * var(--source-vh, 1vh))); 
+        margin: 0;
+        color: #fff;
+        text-shadow: 0 0 20px var(--neon-cyan), 0 0 10px #fff;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        line-height: 1;
+    }
+.poem-art .author{
+        font-size: clamp(1.2rem, 6cqw, calc(2.5 * var(--source-vh, 1vh))); 
+        color: var(--neon-lime);
+        text-shadow: 0 0 10px var(--neon-lime);
+        margin-top: 5px;
+        letter-spacing: 2px;
+    }
+.poem-art #poem-vertical{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; 
+        align-items: center;
+        width: 100%;
+    }
+.poem-art .stanza{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+.poem-art pre{
+        font-family: 'VT323', monospace;
+        
+        font-size: clamp(1.2rem, 15cqw, calc(2.5 * var(--source-vh, 1vh))); 
+        line-height: 0.7; 
+        margin: 0;
+        white-space: pre;
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+    }
+.poem-art .stanza:nth-child(odd) pre{ 
+        text-shadow: 0 0 12px var(--neon-magenta), 0 0 2px #fff; 
+    }
+.poem-art .stanza:nth-child(even) pre{ 
+        text-shadow: 0 0 12px var(--neon-cyan), 0 0 2px #fff; 
+    }
+.poem-art .stanza:last-child pre{ 
+        text-shadow: 0 0 20px var(--neon-lime), 0 0 40px var(--neon-lime);
+        transform: scale(1.05);
+    }
+@container (max-width: 600px){.poem-art h1{ letter-spacing: 2px; }
+.poem-art pre{ font-size: clamp(1rem, 13cqw, calc(2.2 * var(--source-vh, 1vh))); }}

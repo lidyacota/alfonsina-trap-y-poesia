@@ -1,0 +1,134 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+    --mexa-pink: #ff00ff;
+    --mexa-cyan: #00ffff;
+    --mexa-lime: #39ff14;
+    --mexa-red: #ff0000;
+    --mexa-yellow: #ffff00; 
+  }
+.poem-art{ 
+    margin: 0; 
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden; 
+  }
+.poem-art .poem-terminal{
+    width: 95cqw;
+    height: calc(95 * var(--source-vh, 1vh));
+    margin: calc(2.5 * var(--source-vh, 1vh)) auto;
+    background: #000;
+    border: 4px double var(--mexa-pink); 
+    border-left: 12px solid var(--mexa-lime);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 50px rgba(255, 0, 255, 0.4);
+    overflow: hidden;
+  }
+.poem-art .terminal-header{
+    padding: 2cqw 4cqw;
+    background: linear-gradient(90deg, #200020, #000);
+    border-bottom: 3px solid var(--mexa-lime);
+    flex-shrink: 0;
+    z-index: 10;
+  }
+.poem-art h1{
+    font-family: 'VT323', monospace;
+    font-size: 8cqw; 
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px var(--mexa-red), -4px -4px 0px var(--mexa-cyan);
+  }
+.poem-art .author{
+    font-family: 'VT323', monospace;
+    font-size: 2.8cqw;
+    color: #000;
+    background: var(--mexa-lime);
+    display: inline-block;
+    padding: 0 10px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+.poem-art .scroll-body{
+    padding: 3cqw 4cqw;
+    overflow-y: auto;
+    flex-grow: 1;
+    z-index: 5;
+  }
+.poem-art .scroll-body::-webkit-scrollbar{ width: 15px; }
+.poem-art .scroll-body::-webkit-scrollbar-thumb{ 
+    background: repeating-linear-gradient(45deg, var(--mexa-yellow), var(--mexa-yellow) 10px, var(--mexa-red) 10px, var(--mexa-red) 20px);
+  }
+.poem-art p{
+    font-size: 3.5cqw; 
+    line-height: 1.2;
+    margin-bottom: 5cqw;
+    color: #ffffff;
+    white-space: nowrap; 
+    font-weight: bold;
+  }
+.poem-art .kitsch-word{
+    display: inline-block;
+    position: relative;
+    font-weight: 900;
+    background: linear-gradient(
+      90deg, 
+      var(--mexa-lime), 
+      var(--mexa-pink), 
+      var(--mexa-cyan), 
+      var(--mexa-red), 
+      var(--mexa-yellow),
+      var(--mexa-lime)
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    animation: rainbowFlow 1s linear infinite, buzzShake 0.08s infinite;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+@keyframes rainbowFlow{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+@keyframes buzzShake{
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-1px, -1px); }
+    100% { transform: translate(1px, 1px); }
+  }
+.poem-art .overlay-effects{
+    width: 100%; height: 100%;
+    position: absolute; top: 0; left: 0;
+    background: 
+      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%),
+      url('https://www.transparenttextures.com/patterns/stardust.png'); 
+    background-size: 100% 4px, auto;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+@container (max-width: 600px){.poem-art p{ font-size: 6.5cqw; white-space: normal; }
+.poem-art h1{ font-size: 15cqw; }}

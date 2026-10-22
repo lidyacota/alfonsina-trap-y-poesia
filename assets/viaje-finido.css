@@ -1,0 +1,125 @@
+.prompt-art{ margin: 0; font-family: 'Roboto Mono', monospace; overflow: hidden; }
+.prompt-art .terminal-container{ background: linear-gradient(135deg, #800080 0%, #ff00ff 100%); color: #ffffff; border-radius: 12px; padding: 2cqw; box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); border: 4px solid #330033; height: calc(calc(100 * var(--source-vh, 1vh)) - 4cqw); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.prompt-art .terminal-container::before{ content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%); z-index: 2; background-size: 100% 4px; pointer-events: none; opacity: 0.5; }
+.prompt-art .terminal-header{ display: flex; align-items: center; gap: 1cqw; margin-bottom: 2cqw; border-bottom: 2px solid rgba(255, 255, 255, 0.4); padding-bottom: 1cqw; flex-shrink: 0; }
+.prompt-art .dot{ height: 1.2cqw; width: 1.2cqw; min-height: 10px; min-width: 10px; border-radius: 50%; display: inline-block; }
+.prompt-art .red{ background-color: #ff5f56; }
+.prompt-art .yellow{ background-color: #ffbd2e; }
+.prompt-art .green{ background-color: #27c93f; }
+.prompt-art .scroll-content{ overflow-y: auto; flex-grow: 1; z-index: 3; padding-right: 1cqw; }
+.prompt-art .scroll-content::-webkit-scrollbar{ width: 8px; }
+.prompt-art .scroll-content::-webkit-scrollbar-track{ background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+.prompt-art .scroll-content::-webkit-scrollbar-thumb{ background: #ffffff; border-radius: 4px; box-shadow: 0 0 10px #ffffff; }
+.prompt-art .label{ color: #ff00ff; background-color: #ffffff; display: inline-block; padding: 0.5cqw 1cqw; font-weight: 900; text-transform: uppercase; font-size: 1.5cqw; margin-bottom: 2cqw; border-radius: 4px; box-shadow: 2px 2px 0px #330033; letter-spacing: 1px; }
+.prompt-art code{ display: block; white-space: pre-wrap; word-break: break-word; line-height: 1.5; color: #ffffff; font-size: 2.2cqw; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+.prompt-art code::after{ content: "▋"; animation: blink 1s step-end infinite; margin-left: 8px; }
+@keyframes blink{ 50% { opacity: 0; } }
+@container (max-width: 600px){.prompt-art .label{ font-size: 4cqw; padding: 2cqw; }
+.prompt-art code{ font-size: 5cqw; }
+.prompt-art .terminal-header span{ font-size: 3cqw !important; }}
+.poem-art{
+        --deep-black: #000;
+        --neon-fiuscha: #ff00ff;
+        --neon-purple: #9d00ff;
+        --neon-green: #39ff14;
+        --neon-pink: #ff1493;
+        --neon-aqua: #00ffff;
+    }
+.poem-art{
+        margin: 0; padding: 0;
+        background-color: var(--deep-black);
+        color: #fff;
+        font-family: 'VT323', monospace;
+        overflow-x: hidden;
+    }
+.poem-art #background-fx{
+        position: fixed;
+        top: 0; left: 0;
+        width: 100cqw; height: calc(100 * var(--source-vh, 1vh));
+        z-index: -1;
+        background: #000;
+        transition: background 1.5s ease;
+    }
+.poem-art #container{
+        padding: 0 15cqw 0 10cqw; 
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+.poem-art header{
+        height: calc(100 * var(--source-vh, 1vh));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+.poem-art h1{
+        font-size: clamp(5rem, 18cqw, 12rem);
+        margin: 0;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 30px var(--neon-fiuscha);
+    }
+.poem-art .author{
+        font-size: clamp(2rem, 5cqw, 4rem);
+        color: var(--neon-aqua);
+        opacity: 0.8;
+    }
+.poem-art #scroll-hint-vertical{
+        position: fixed;
+        bottom: 50px; right: 3cqw;
+        z-index: 100;
+        display: flex; flex-direction: column; align-items: center; gap: 15px;
+        transition: opacity 0.5s ease;
+    }
+.poem-art .hint-text-vertical{
+        font-size: 1.8rem;
+        color: var(--neon-green);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        text-shadow: 0 0 10px var(--neon-green);
+    }
+.poem-art .arrow-vertical{
+        font-size: 3rem;
+        color: var(--neon-green);
+        animation: bounce 1.5s infinite;
+        text-shadow: 0 0 10px var(--neon-green);
+    }
+@keyframes bounce{
+        0%, 100% { transform: translateY(0); opacity: 0.5; }
+        50% { transform: translateY(15px); opacity: 1; }
+    }
+.poem-art .stanza{
+        margin-bottom: calc(85 * var(--source-vh, 1vh)); 
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1.2s ease-out;
+        filter: blur(10px);
+    }
+.poem-art .stanza.visible{
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+.poem-art pre{
+        font-family: 'VT323', monospace;
+        font-size: clamp(2.2rem, 6.5cqw, 4.8rem);
+        line-height: 1.1;
+        white-space: pre-wrap;
+    }
+.poem-art .s1 pre{ color: #fff; text-shadow: 0 0 15px var(--neon-fiuscha), 0 0 30px var(--neon-fiuscha); }
+.poem-art .s2 pre{ color: #fff; text-shadow: 0 0 15px var(--neon-purple), 0 0 30px var(--neon-purple); }
+.poem-art .s3 pre{ color: #fff; text-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--neon-green); }
+.poem-art .s4 pre{ color: #fff; text-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink); }
+.poem-art .odio.visible pre{
+        color: var(--neon-aqua);
+        text-shadow: 0 0 10px var(--neon-aqua), 0 0 30px var(--neon-aqua), 0 0 50px #0055ff;
+        animation: waterEffect 2s infinite alternate ease-in-out;
+    }
+@keyframes waterEffect{
+        from { transform: skewX(-1deg); filter: brightness(1); }
+        to { transform: skewX(1deg); filter: brightness(1.3); text-shadow: 0 0 20px var(--neon-aqua), 0 0 40px #00aaff; }
+    }
+@container (max-width: 600px){.poem-art #container{ padding-right: 12cqw; }}
