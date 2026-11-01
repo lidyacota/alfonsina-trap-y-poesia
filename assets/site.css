@@ -70,7 +70,7 @@
 .author-photo{display:block;width:100%;height:434px;object-fit:cover;object-position:50% 50%;background:#fff}
 
 /* ===== Pie de página: igual al original ===== */
-.credits{padding:35px 5% 40px;text-align:center;background:#fff;color:#1c1c1c;font-family:'Share Tech Mono',monospace;font-size:16px;line-height:24px}.credits small{display:block;font-size:inherit}.credits a{color:#1c1c1c}
+.credits{padding:35px 5% 40px;text-align:center;background:#fff;color:#1c1c1c;font-family:'Share Tech Mono',monospace;font-size:16px;line-height:24px}.credits small{display:block;font-size:inherit;max-width:900px;margin:0 auto 6px}.credits a{color:#1c1c1c}
 
 /* ===== Animación al pasar el mouse: brillo neón + temblor, conservando los colores ===== */
 @keyframes hover-shake{0%{transform:translate(0,0)}25%{transform:translate(1px,-1px) rotate(.2deg)}50%{transform:translate(-1px,1px) rotate(-.2deg)}100%{transform:translate(0,0)}}

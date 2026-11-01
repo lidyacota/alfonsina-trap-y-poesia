@@ -32,6 +32,7 @@ The manifesto "for a Transmedia Remediation" is the central text of the work: a 
 ## Datos clave / Key facts
 
 - Autora de la obra / Author of the work: Lidya Cota, artista transmedia mexicana y latinoamericana, creadora de literatura digital, madre y especialista en tecnología / Mexican and Latin American transmedia artist, creator of electronic literature, mother, and technology specialist. https://www.lidyacota.com/
+- Créditos / Credits: concepción y dirección artística, selección de poemas, manifiesto, dirección musical mediante IA, diseño y programación de la experiencia web: Lidya Cota / concept and artistic direction, poem selection, manifesto, musical direction through AI, and design and programming of the web experience: Lidya Cota.
 - Autora de los poemas / Author of the poems: Alfonsina Storni (1892–1938), poeta argentina / Argentine poet. Los poemas se usan sin alterar una sola palabra y están en dominio público / The poems are used without altering a single word and are in the public domain.
 - Libro fuente / Source book: "El dulce daño" (Editorial Cooperativa Buenos Aires, 1918). No tiene traducción publicada al inglés; su título se cita en español / It has no published English translation; its title is cited in Spanish.
 - Formato / Format: álbum-libro digital; cada track reúne la música (presentada en video), el prompt de IA y el poema reactivado como poesía visual animada / digital album-book; each track brings together the music (presented as a video), the AI prompt, and the poem reactivated as animated visual poetry.
