@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alfonsinatrapypoesia.lidyacota.com/sitemap.xml
+Sitemap: https://lidyacota.github.io/alfonsina-trap-y-poesia/sitemap.xml

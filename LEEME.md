@@ -20,7 +20,6 @@ Esta versión restaura la distribución vertical original: video, prompt y poema
 - `sitemap.xml` y `robots.txt`: para buscadores.
 - `llms.txt`: resumen del proyecto y del manifiesto para inteligencias artificiales (ChatGPT, Claude, Perplexity, etc.), en español e inglés.
 - `assets/alfonsina.png`: imagen fija utilizada en el logotipo de navegación.
-- `CNAME`: dominio `alfonsinatrapypoesia.lidyacota.com`.
 - `.nojekyll`: permite servir los archivos directamente en GitHub Pages.
 
 No hace falta instalar dependencias ni compilar el sitio. El contenido está incluido en los archivos HTML. YouTube y Google Fonts requieren conexión a Internet.
@@ -37,14 +36,19 @@ python3 -m http.server 8000
 
 Abre `http://localhost:8000`. Para cerrar el servidor, pulsa Ctrl+C.
 
-## Subirlo a GitHub Pages cuando quieras
+## Publicación en GitHub Pages
 
-1. Crea el repositorio y sube el contenido de esta carpeta a su raíz, incluido `.nojekyll`.
-2. Activa GitHub Pages para publicar la raíz de la rama que uses.
-3. Configura el dominio personalizado y su DNS para GitHub Pages.
-4. Activa HTTPS cuando GitHub haya verificado el dominio.
+Dirección principal: https://lidyacota.github.io/alfonsina-trap-y-poesia/
 
-El archivo CNAME está preparado, pero no configura por sí mismo el DNS. La redirección de `www` queda a tu cargo, como acordamos.
+1. Publica el contenido en la raíz del repositorio `lidyacota/alfonsina-trap-y-poesia`, incluido `.nojekyll`.
+2. En Settings → Pages, usa la raíz de la rama `main` como fuente de publicación.
+3. Deja vacío el campo Custom domain y no agregues un archivo `CNAME`: el proyecto debe conservar su dirección `github.io` y funcionar sin el dominio personal.
+4. Activa Enforce HTTPS.
+5. En Google Search Console, verifica la propiedad de prefijo de URL `https://lidyacota.github.io/alfonsina-trap-y-poesia/` y envía `https://lidyacota.github.io/alfonsina-trap-y-poesia/sitemap.xml`.
+
+Las rutas de navegación y recursos son relativas para funcionar dentro de `/alfonsina-trap-y-poesia/`. Los enlaces al portafolio de la autora se conservan como referencias externas; no son necesarios para cargar la obra.
+
+Los buscadores consultan el archivo `robots.txt` de la raíz del servidor (`https://lidyacota.github.io/robots.txt`), no el archivo de esta subcarpeta. El mapa del sitio puede enviarse directamente en Search Console.
 
 ## Contenido y verificación
 

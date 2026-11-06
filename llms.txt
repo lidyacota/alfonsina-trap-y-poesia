@@ -26,8 +26,8 @@ The manifesto "for a Transmedia Remediation" is the central text of the work: a 
 - Technology and gender: "Technology, in the hands of a woman creator, is not a neutral instrument."
 - High poetry and popular culture: the boundary between academic intellectualism and urban popular drive is "a boundary that, to a great extent, was always a class boundary."
 
-- [Manifiesto completo (español)](https://alfonsinatrapypoesia.lidyacota.com/#manifiesto)
-- [Full manifesto (English)](https://alfonsinatrapypoesia.lidyacota.com/en/#manifiesto)
+- [Manifiesto completo (español)](https://lidyacota.github.io/alfonsina-trap-y-poesia/#manifiesto)
+- [Full manifesto (English)](https://lidyacota.github.io/alfonsina-trap-y-poesia/en/#manifiesto)
 
 ## Datos clave / Key facts
 
@@ -39,23 +39,23 @@ The manifesto "for a Transmedia Remediation" is the central text of the work: a 
 - Disciplinas / Fields: literatura digital, poesía transmedia, poesía visual, traducción intersemiótica, música urbana; literatura digital hecha por mujeres en Latinoamérica / electronic literature, transmedia poetry, visual poetry, intersemiotic translation, urban music; digital literature by Latin American women.
 - Herramientas / Tools: producción musical de Lidya Cota con Suno; videos en Canva con videos de stock gratuitos; prompts con apoyo de Gemini; sitio web con ChatGPT y Claude / music production by Lidya Cota with Suno; videos made in Canva with free stock footage; prompts developed with the help of Gemini; website built with ChatGPT and Claude.
 - Licencia / License: CC BY-NC-SA 4.0 (obra de Lidya Cota / work by Lidya Cota). Poemas de Alfonsina Storni en dominio público / Poems by Alfonsina Storni in the public domain.
-- Cómo citar / How to cite: Cota, Lidya. "Alfonsina: Trap y Poesía". Ciudad de México, 2026. https://alfonsinatrapypoesia.lidyacota.com/
+- Cómo citar / How to cite: Cota, Lidya. "Alfonsina: Trap y Poesía". Ciudad de México, 2026. https://lidyacota.github.io/alfonsina-trap-y-poesia/
 
 ## Páginas principales / Main pages
 
-- [Portada y manifiesto (español)](https://alfonsinatrapypoesia.lidyacota.com/): lista de tracks y manifiesto "para una Remediación Transmedia".
-- [About the project and manifesto (English)](https://alfonsinatrapypoesia.lidyacota.com/en/): presentation of the project and full English translation of the manifesto.
+- [Portada y manifiesto (español)](https://lidyacota.github.io/alfonsina-trap-y-poesia/): lista de tracks y manifiesto "para una Remediación Transmedia".
+- [About the project and manifesto (English)](https://lidyacota.github.io/alfonsina-trap-y-poesia/en/): presentation of the project and full English translation of the manifesto.
 
 ## Tracks: poemas de Alfonsina Storni / poems by Alfonsina Storni
 
-- [01 "Capricho"](https://alfonsinatrapypoesia.lidyacota.com/inicio/capricho/): Neoperreo & Industrial Reggaeton [Dark Experimental]
-- [02 "Dime"](https://alfonsinatrapypoesia.lidyacota.com/inicio/dime/): Mexican Reggaeton & Perreo Chilango [Viral Street Style]
-- [03 "Primavera"](https://alfonsinatrapypoesia.lidyacota.com/inicio/primavera/): Modern Dominican Dembow [Aggressive & High-Energy]
-- [04 "Tú y yo"](https://alfonsinatrapypoesia.lidyacota.com/inicio/tu-y-yo/): Modern Polish Reggaeton [Sweet & Melodic]
-- [05 "Tu dulzura"](https://alfonsinatrapypoesia.lidyacota.com/inicio/tu-dulzura/): Latin Urban Reggaeton [Sensual & Mid-tempo]
-- [06 "¡Oh, tú!"](https://alfonsinatrapypoesia.lidyacota.com/inicio/oh-tu/): Cartoon Trap & Comedy Hip-Hop [Linguistic Glitch]
-- [07 "Viaje finido"](https://alfonsinatrapypoesia.lidyacota.com/inicio/viaje-finido/): Puerto Rican Reggaeton & Latin Trap [Melancholic Urbano]
-- [08 "Risas"](https://alfonsinatrapypoesia.lidyacota.com/inicio/risas/): Mexican Reggaeton [Chacalón Flow & Dirty Dembow]
+- [01 "Capricho"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/capricho/): Neoperreo & Industrial Reggaeton [Dark Experimental]
+- [02 "Dime"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/dime/): Mexican Reggaeton & Perreo Chilango [Viral Street Style]
+- [03 "Primavera"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/primavera/): Modern Dominican Dembow [Aggressive & High-Energy]
+- [04 "Tú y yo"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/tu-y-yo/): Modern Polish Reggaeton [Sweet & Melodic]
+- [05 "Tu dulzura"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/tu-dulzura/): Latin Urban Reggaeton [Sensual & Mid-tempo]
+- [06 "¡Oh, tú!"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/oh-tu/): Cartoon Trap & Comedy Hip-Hop [Linguistic Glitch]
+- [07 "Viaje finido"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/viaje-finido/): Puerto Rican Reggaeton & Latin Trap [Melancholic Urbano]
+- [08 "Risas"](https://lidyacota.github.io/alfonsina-trap-y-poesia/inicio/risas/): Mexican Reggaeton [Chacalón Flow & Dirty Dembow]
 
 ## Videos
 
@@ -63,4 +63,4 @@ The manifesto "for a Transmedia Remediation" is the central text of the work: a 
 
 ## Optional
 
-- [Mapa del sitio / Sitemap](https://alfonsinatrapypoesia.lidyacota.com/sitemap.xml)
+- [Mapa del sitio / Sitemap](https://lidyacota.github.io/alfonsina-trap-y-poesia/sitemap.xml)
